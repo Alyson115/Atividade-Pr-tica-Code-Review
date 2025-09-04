@@ -21,6 +21,14 @@ def cifra_de_cesar(texto, deslocamento):
     return resultado
 
 
-def valida_cpf(cpf_string):
+def encontrar_maior_palavra(frase):
     # TODO: Implementar a lógica
     pass
+    palavras = frase.split()
+    maior = ""
+    for palavra in palavras:
+        # remove pontuação antes de contar
+        limpa = palavra.strip(string.punctuation)
+        if len(limpa) > len(maior):
+            maior = limpa
+    return maior
